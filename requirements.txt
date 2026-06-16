@@ -1,0 +1,31 @@
+# --- Stack del curso: LangChain + LangGraph + Gemini -----------------------
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0          # PyPDFLoader, FAISS vector store
+langchain-text-splitters>=0.3.0     # RecursiveCharacterTextSplitter
+langchain-google-genai>=2.0.0       # init_chat_model + GoogleGenerativeAIEmbeddings
+langgraph>=0.2.0                    # StateGraph, ToolNode, MemorySaver
+google-genai>=1.0.0                # SDK base de Google Gemini
+
+# --- Vector store e ingesta ------------------------------------------------
+faiss-cpu>=1.8.0
+pypdf>=4.0.0
+
+# --- Herramienta get_weather -----------------------------------------------
+requests>=2.31.0                   # Open-Meteo (sin clave)
+pydantic>=2.6.0                    # Esquema de la herramienta
+
+# --- Configuración ---------------------------------------------------------
+python-dotenv>=1.0.0
+
+# --- Evaluación y notebook -------------------------------------------------
+pandas>=2.2.0
+matplotlib>=3.8.0
+jupyter>=1.0.0
+
+# --- Bonus: app web --------------------------------------------------------
+streamlit>=1.33.0
+
+# --- Opcional: proveedor alternativo OpenAI --------------------------------
+# Necesario solo si usas LLM_PROVIDER=openai.
+langchain-openai>=0.2.0
