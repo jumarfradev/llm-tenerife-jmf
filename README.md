@@ -1,4 +1,4 @@
-# 🌋 Asistente turístico conversacional de Tenerife
+# Asistente turístico conversacional de Tenerife
 
 Asistente que combina **RAG** sobre una guía turística de Tenerife, **memoria
 multiturno** y **llamadas a funciones externas** (`get_weather`). Proyecto final
@@ -10,7 +10,7 @@ LangGraph** con **Google Gemini** (`init_chat_model`,
 `FAISS`, `StateGraph`). Admite también **OpenAI** cambiando una variable de
 entorno.
 
-## ✨ Características
+## Características
 
 - **RAG con citas.** La guía se trocea con `RecursiveCharacterTextSplitter`
   (`chunk_size=500`, `chunk_overlap=80`), se indexa en **FAISS** y se persiste en
@@ -27,7 +27,7 @@ entorno.
 - **Bonus.** App web con **Streamlit** (streaming + panel de observabilidad),
   doble proveedor (Google/OpenAI) y *logging* de turnos y de la herramienta.
 
-## 📁 Estructura
+## Estructura
 
 ```
 tenerife-rag-assistant/
@@ -51,7 +51,7 @@ tenerife-rag-assistant/
 └── .gitignore
 ```
 
-## 🚀 Puesta en marcha
+## Puesta en marcha
 
 ```bash
 # 1. Dependencias
@@ -85,7 +85,7 @@ Variables de entorno (en `.env`):
 Los parámetros del modelo (temperatura, `max_tokens`), el *chunking* y `top_k`
 se ajustan en `src/config.py`.
 
-## 🧪 Cómo cumple la rúbrica
+## Cómo cumple la rúbrica
 
 | Requisito | Dónde |
 |-----------|-------|
@@ -98,7 +98,7 @@ se ajustan en `src/config.py`.
 | UX (citas, errores útiles, ejemplos) | `welcome()`, app Streamlit |
 | Bonus (web, doble proveedor, observabilidad) | `app/`, `config.py`, logs |
 
-## ⚠️ Notas
+## Notas
 
 - El índice FAISS depende del modelo de embeddings: si cambias de proveedor,
   reconstruye el índice (`force_rebuild=True` o borra `storage/faiss/`).
